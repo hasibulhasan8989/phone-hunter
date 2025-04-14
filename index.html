@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter API</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class=" text-center text-3xl font-semibold">Phone Hunter API</h1>
+    </header>
+    <main class="container mx-auto">
+        <section class="bg-slate-300 p-5 rounded-xl">
+            <input id="search-field" type="text" placeholder="Search...." class="input" />
+            <button onclick="search()" id="search-btn" class="btn btn-secondary">Search</button>
+        </section>
+
+        <section id="loading" class="flex justify-center items-center min-h-screen hidden">
+            <span class="loading loading-spinner p-5  text-error"></span>
+
+        </section>
+
+        <section class="mt-4">
+            <div id="phone-container" class="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 gap-4 ">
+            </div>
+            <div id="show-more" class="hidden text-center">
+                <button  onclick="showMore()" class="btn btn-accent text-center my-8 ">show more..</button>
+
+            </div>
+        </section>
+
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+<button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="phone-details-all">
+        
+        <p class="py-4">Press ESC key or click the button below to close</p>
+    </div>
+    
+
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+        </section>
+        
+    </main>
+    <footer></footer>
+
+    <!-- JS Script Files -->
+    <script src="js/hunter.js"></script>
+</body>
+
+</html>
